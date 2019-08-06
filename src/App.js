@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import SearchBar from './components/searchBar';
+import MovieContainer from './components/movieContainer';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      Hello? This is App.
+      <SearchBar />
+      <MovieContainer />
     </div>
   );
 }
 
 export default App;
+
+/*
+
+Three main components:
+
+1) Search bar.
+2) Container for list of movies.
+3) Card for individual movie.
+
+*/
