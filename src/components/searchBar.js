@@ -7,33 +7,27 @@ class SearchBar extends React.Component {
         searchResults: []
     }
 
-    componentDidMount() {
-        this.renderResults();
-    }
-
-    renderResults = () => {
+    renderResults = async () => {
         let getUrl = 'https://api.themoviedb.org/3/search/movie';
         let getApi = '?api_key=f78ec448fcd99f333c9145fd8c13eff0';
         let getQuery = '&query=' + this.state.input;
         let fullRequest = getUrl + getApi + getQuery;
+        const response = await Axios.get(fullRequest);
 
-        Axios
-            .get(fullRequest)
-            .then(data => 
-               { this.setState({ searchResults: data.data.results });
-                console.log(this.state.searchResults);}
-                )
+        this.setState({
+            searchResults: response.data.results
+        })
 
-            .catch(err => {
-                console.log(err);
-                //return null;
-            })
     }
 
     handleChange = (props) => {
         this.setState({
             input: props.target.value
         })
+        
+        setTimeout(() => {
+            this.renderResults();
+        }, 500);
     }
 
     render () {
@@ -41,7 +35,7 @@ class SearchBar extends React.Component {
             <div>
                 <input value={this.state.input} onChange={this.handleChange} />
                 <div>
-                    {this.state.searchResults.map(x => <div><h1>{x.original_title}</h1><img alt="poster" src={'http://image.tmdb.org/t/p/w185' + x.poster_path} /></div>)}
+                    {this.state.searchResults.map(x => <div key={x.original_title}><h1 key={x.original_title}>{x.original_title}</h1><img alt="poster" src={'http://image.tmdb.org/t/p/w185' + x.poster_path} /></div>)}
                 </div>
             </div>)
     }
