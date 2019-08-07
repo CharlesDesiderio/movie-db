@@ -1,15 +1,16 @@
 import React from 'react';
 import Axios from 'axios';
+import MovieContainer from './movieContainer';
 
 class SearchBar extends React.Component {
     state = {
-        input: 'matrix',
+        input: '',
         searchResults: []
     }
 
     renderResults = async () => {
         let getUrl = 'https://api.themoviedb.org/3/search/movie';
-        let getApi = '?api_key=f78ec448fcd99f333c9145fd8c13eff0';
+        let getApi = '?api_key=f78ec448fcd99f333c9145fd8c13eff0'; // Yeah, I know. 
         let getQuery = '&query=' + this.state.input;
         let fullRequest = getUrl + getApi + getQuery;
         const response = await Axios.get(fullRequest);
@@ -17,7 +18,6 @@ class SearchBar extends React.Component {
         this.setState({
             searchResults: response.data.results
         })
-
     }
 
     handleChange = (props) => {
@@ -35,7 +35,7 @@ class SearchBar extends React.Component {
             <div>
                 <input value={this.state.input} onChange={this.handleChange} />
                 <div>
-                    {this.state.searchResults.map(x => <div key={x.original_title}><h1 key={x.original_title}>{x.original_title}</h1><img alt="poster" src={'http://image.tmdb.org/t/p/w185' + x.poster_path} /></div>)}
+                    <MovieContainer results={this.state.searchResults}/>
                 </div>
             </div>)
     }
