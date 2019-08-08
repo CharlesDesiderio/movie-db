@@ -26,7 +26,12 @@ class MovieDetail extends React.Component {
         <h1>{this.props.location.state.title}</h1>
         <img alt="poster" src={'http://image.tmdb.org/t/p/w185' + this.props.location.state.imageUrl} />
         <p>{this.props.location.state.description}</p>
-         {this.state.actorList.map(x=><div key={x.credit_id + "div"} ><h1 key={x.credit_id}>{x.name} as {x.character}</h1><img alt={x.name} key={x.credit_id + "photo"} src={'http://image.tmdb.org/t/p/w185/' + x.profile_path} /></div>)}
+         {this.state.actorList.map(x => 
+            <div key={x.credit_id + "div"} >
+                <h1 key={x.credit_id}>{x.name} as {x.character}</h1>
+                <img alt={x.name} key={x.credit_id + "photo"} src={'http://image.tmdb.org/t/p/w185/' + x.profile_path} />
+            </div>
+            )}
         </div>
     )}
 }
