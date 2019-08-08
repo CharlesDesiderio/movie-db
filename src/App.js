@@ -12,7 +12,7 @@ function App() {
       </div>
       <Switch>
         <Route exact path="/" component={SearchBar} />
-        <Route path="/movie/" render={(props) => <MovieDetail {...props} />} />
+        <Route path="/movie/" render={(props) => <MovieDetail {...props} key={props.id} title={props.title} />} />
       </Switch>
     </Router>
   );
