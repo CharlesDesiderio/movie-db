@@ -5,14 +5,23 @@ import MovieContainer from './movieContainer';
 class SearchBar extends React.Component {
     state = {
         input: '',
-        searchResults: []
+        api: '?api_key=f78ec448fcd99f333c9145fd8c13eff0',
+        searchResults: [],
+    }
+
+    async componentDidMount() {
+        let latestFetch = 'https://api.themoviedb.org/3/trending/movie/week' + this.state.api;
+        let latestMovies = await Axios.get(latestFetch)
+        
+        this.setState({
+            searchResults: latestMovies.data.results
+        })
     }
 
     renderResults = async () => {
         let getUrl = 'https://api.themoviedb.org/3/search/movie';
-        let getApi = '?api_key=f78ec448fcd99f333c9145fd8c13eff0'; // Yeah, I know. 
         let getQuery = '&query=' + this.state.input;
-        let fullRequest = getUrl + getApi + getQuery;
+        let fullRequest = getUrl + this.state.api + getQuery;
         const response = await Axios.get(fullRequest);
 
         this.setState({
@@ -27,7 +36,7 @@ class SearchBar extends React.Component {
         
         setTimeout(() => {
             this.renderResults();
-        }, 1500);
+        }, 1000);
     }
 
     render () {

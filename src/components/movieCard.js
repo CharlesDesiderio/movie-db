@@ -7,7 +7,7 @@ class MovieCard extends React.Component {
         
         return <div>
             <div className="poster">
-                <img alt="poster" src={'http://image.tmdb.org/t/p/w185' + this.props.imageUrl} />
+                {this.props.imageUrl ? <img alt="poster" src={'http://image.tmdb.org/t/p/w185' + this.props.imageUrl} /> : <div>No Photo</div>}
             </div>
             <div className="info">
                 <h1>{this.props.title}</h1>
