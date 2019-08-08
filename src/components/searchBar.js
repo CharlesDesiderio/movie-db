@@ -27,7 +27,7 @@ class SearchBar extends React.Component {
         
         setTimeout(() => {
             this.renderResults();
-        }, 500);
+        }, 1500);
     }
 
     render () {
