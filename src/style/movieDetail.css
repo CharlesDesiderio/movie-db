@@ -1,0 +1,70 @@
+.actorList {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        
+}
+
+.individual {
+    margin-top: 40px;
+    padding: 20px 35px 20px 35px;
+    width: 185px;
+    max-width: 185px;
+}
+
+.innerPoster {
+    min-height: 277px;
+    max-height: 277px;
+    min-width: 185px;
+    max-width: 185px;
+    margin: auto;
+    background-color: #E5E8EB;
+    border-radius: 5px;
+    box-shadow: 5px 5px 11px 3px gray; 
+}
+        
+.innerPoster img {
+    min-height: 277px;
+    max-height: 277px;
+    min-width: 185px;
+    max-width: 185px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 11px 3px gray; 
+}
+        
+.posterSpan {
+    display: block;
+    text-align: center;
+    height: 270px;
+    line-height: 260px;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+        
+.title {
+    padding-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.posterSpan {
+    display: block;
+    text-align: center;
+    height: 270px;
+    line-height: 260px;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-color: black;
+    height: 800px;
+    margin: 0;
+}

@@ -1,18 +1,18 @@
 import React from 'react';
+import '../style/movieCard.css';
 
 class MovieCard extends React.Component {
     
     render() {
         let yearSnip = this.props.release.slice(0,4);
         
-        return <div>
+        return <div className="movieCard">
             <div className="poster">
-                {this.props.imageUrl ? <img alt="poster" src={'http://image.tmdb.org/t/p/w185' + this.props.imageUrl} /> : <div>No Photo</div>}
+                <div className="innerPoster">{this.props.imageUrl ? <img alt="poster" src={'http://image.tmdb.org/t/p/w185' + this.props.imageUrl} /> : <span className="posterSpan">No Photo</span>}</div>
             </div>
             <div className="info">
-                <h1>{this.props.title}</h1>
-                <h2>{yearSnip}</h2>
-                <p>{this.props.rating}</p>
+                <div className="title">{this.props.title}</div>
+                <div>{yearSnip}</div>
             </div>
         </div>
     }

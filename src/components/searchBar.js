@@ -1,6 +1,7 @@
 import React from 'react';
 import Axios from 'axios';
 import MovieContainer from './movieContainer';
+import '../style/searchBar.css';
 
 class SearchBar extends React.Component {
     state = {
@@ -41,9 +42,9 @@ class SearchBar extends React.Component {
 
     render () {
         return (
-            <div>
-                <input value={this.state.input} onChange={this.handleChange} />
-                <div>
+            <div className="searchBarContainer">
+                <input placeholder="Movie Search" className="input" value={this.state.input} onChange={this.handleChange} />
+                <div className="movieContainer">
                     <MovieContainer results={this.state.searchResults}/>
                 </div>
             </div>)

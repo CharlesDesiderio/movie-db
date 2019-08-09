@@ -1,8 +1,8 @@
 import React from 'react';
 import SearchBar from './components/searchBar';
 import MovieDetail from './components/movieDetail';
-
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import './style/app.css';
 
 function App() {
   return (
