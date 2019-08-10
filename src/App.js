@@ -10,8 +10,8 @@ function App() {
       <div className="App">
       </div>
       <Switch>
-        <Route exact path="/" component={SearchBar} />
-        <Route path="/movie/" render={(props) => <MovieDetail {...props} key={props.id} title={props.title} />} />
+        <Route exact path="https://charlesdesiderio.github.io/movie-db/" component={SearchBar} />
+        <Route path="https://charlesdesiderio.github.io/movie-db/movie/" render={(props) => <MovieDetail {...props} key={props.id} title={props.title} />} />
       </Switch>
     </Router>
   );
