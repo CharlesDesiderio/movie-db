@@ -7,6 +7,7 @@ import './style/app.css';
 function App() {
   return (
     <Router>
+      <SearchBar />
       <div className="App">
       <Switch>
         <Route exact path="https://charlesdesiderio.github.io/movie-db/" component={SearchBar} />
