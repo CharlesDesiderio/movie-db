@@ -2,7 +2,7 @@
   "name": "movie-db",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://CharlesDesiderio.github.io/movie-db",
+  "homepage":"https://charlesdesiderio.github.io/movie-db/",
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.10.1",
     "axios": "^0.19.0",
