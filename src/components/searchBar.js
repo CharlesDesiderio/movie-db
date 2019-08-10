@@ -43,6 +43,7 @@ class SearchBar extends React.Component {
     render () {
         return (
             <div className="searchBarContainer">
+                <h1>The Really Totally Great Movie Search</h1>
                 <input placeholder="Movie Search" className="input" value={this.state.input} onChange={this.handleChange} />
                 <div className="movieContainer">
                     <MovieContainer results={this.state.searchResults}/>

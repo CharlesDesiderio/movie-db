@@ -1,10 +1,7 @@
 .actorList {
-        margin-top: 40px;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-
-        
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .individual {
@@ -12,6 +9,10 @@
     padding: 20px 35px 20px 35px;
     width: 185px;
     max-width: 185px;
+}
+
+.poster {
+    padding-right: 40px;
 }
 
 .innerPoster {
@@ -67,4 +68,68 @@
     background-color: black;
     height: 800px;
     margin: 0;
+    background-size: cover;
+}
+
+.movieDetail {
+    width: 100%;
+    margin: auto;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px black;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 800px;    
+}
+
+.movieDetailTitle {
+    padding-top: 40px;
+    font-size: 5rem;
+    width: 60%;
+    margin: auto;
+    letter-spacing: .2rem;
+}
+
+.movieDetailInfo {
+    padding: 40px;
+    margin: 40px;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    letter-spacing: .1rem;
+    line-break: .2rem;
+}
+
+.year {
+    font-size: 3rem;
+    margin-left: 2rem;
+}
+
+.featuredCrew {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.actorHeadline {
+    width: 100%;
+    background-color: gray;
+    font-size: 2.5rem;
+    color: white;
+    margin-top: none;
+    padding: 15px;
+    font-weight: bold;
+    letter-spacing: .2rem;
+}
+
+.homeButton {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: white;
+}
+
+.visited {
+    color: white;
 }
