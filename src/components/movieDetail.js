@@ -62,7 +62,7 @@ class MovieDetail extends React.Component {
         <div>
         <div className="container" style={{ backgroundImage: backdropPath }}>
         <div className="movieDetail">
-            <div className="homeButton"><Link className="visited" to="/">Home</Link></div> 
+            <div className="homeButton"><Link className="visited" to="https://charlesdesiderio.github.io/movie-db/">Home</Link></div> 
             <div className="movieDetailTitle"><strong>{this.props.location.state.title}</strong><span className="year">({yearSnip})</span></div>
             <div className="movieDetailInfo">{this.props.location.state.imageUrl ? <img className="poster" alt="poster" src={'http://image.tmdb.org/t/p/w342' + this.props.location.state.imageUrl} /> : <span>No Photo</span> }
                 <div className="featuredCrew">
